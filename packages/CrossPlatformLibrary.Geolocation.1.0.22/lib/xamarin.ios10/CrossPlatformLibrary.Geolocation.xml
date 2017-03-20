@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CrossPlatformLibrary.Geolocation</name>
+    </assembly>
+    <members>
+        <member name="F:CrossPlatformLibrary.Geolocation.Exceptions.GeolocationError.PositionUnavailable">
+            <summary>
+                The provider was unable to retrieve any position data.
+            </summary>
+        </member>
+        <member name="F:CrossPlatformLibrary.Geolocation.Exceptions.GeolocationError.Unauthorized">
+            <summary>
+                The app is not, or no longer, authorized to receive location data.
+            </summary>
+        </member>
+        <member name="P:CrossPlatformLibrary.Geolocation.Position.Altitude">
+            <summary>
+                Gets or sets the altitude in meters relative to sea level.
+            </summary>
+        </member>
+        <member name="P:CrossPlatformLibrary.Geolocation.Position.Accuracy">
+            <summary>
+                Gets or sets the potential position error radius in meters.
+            </summary>
+        </member>
+        <member name="P:CrossPlatformLibrary.Geolocation.Position.AltitudeAccuracy">
+            <summary>
+                Gets or sets the potential altitude error range in meters.
+            </summary>
+            <remarks>
+                Not supported on Android, will always read 0.
+            </remarks>
+        </member>
+        <member name="P:CrossPlatformLibrary.Geolocation.Position.Heading">
+            <summary>
+                Gets or sets the heading in degrees relative to true North.
+            </summary>
+        </member>
+        <member name="P:CrossPlatformLibrary.Geolocation.Position.Speed">
+            <summary>
+                Gets or sets the speed in meters per second.
+            </summary>
+        </member>
+        <member name="M:CrossPlatformLibrary.Geolocation.PositionExtensions.GetLongestRadiusFromCenter(System.Collections.Generic.IEnumerable{CrossPlatformLibrary.Geolocation.Position},CrossPlatformLibrary.Geolocation.Position,System.Double)">
+            <summary>
+                Gets the longest radius from center.
+            </summary>
+            <param name="coordinates">The coordinates.</param>
+            <param name="centerCoordinate">The center coordinate.</param>
+            <param name="zoomLevel">The zoom level.</param>
+            <returns>System.Double.</returns>
+        </member>
+        <member name="M:CrossPlatformLibrary.Geolocation.PositionExtensions.GetAccuracyRadius(CrossPlatformLibrary.Geolocation.Position,System.Double)">
+            <summary>
+                Gets the accuracy radius in pixels.
+                http://developer.nokia.com/resources/library/Lumia/change-history/archived-content/maps-and-navigation/guide-to-the-wp8-maps-api.html
+            </summary>
+            <param name="coordinate">The coordinate.</param>
+            <param name="zoomLevel">The zoom level.</param>
+        </member>
+        <member name="M:CrossPlatformLibrary.Geolocation.PositionExtensions.WithRandomOffset(CrossPlatformLibrary.Geolocation.Position)">
+            <summary>
+                Add some meters of offset to the given Position.
+            </summary>
+            <param name="coordinate">The coordinate.</param>
+            <returns>The new Position.</returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MeteoroloskiPromatrac.OAplikaciji">
+  <ContentPage.Content>
+    <Grid>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="auto"/>
+      </Grid.RowDefinitions>
+      <StackLayout Orientation="Vertical" Grid.Row="0">
+        <Image Source="blueline.png" HorizontalOptions="FillAndExpand"/>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+          <Label Text="O Aplikaciji"/>
+        </StackLayout>
+        <Image Source="blueline.png" HorizontalOptions="FillAndExpand"/>
+        <Label Text="Opis:"/>
+        <Label Text="Ova aplikacija omogućava provjeravanje i bilježenje vremenskih uvjeta na meteorološkim postajama DHMZ-a, u većim Europskim gradovima  i na trenutnoj lokaciji korisnika."/>
+        <Label Text="Razvijena je u kao rad u sklopu kolagija 'Rad sa podacima na mobilnim uređajima i sigurnost mobilnih aplikacija' na Visokoj školi za primijenjeno računarstvo Visokog učilišta Algebra. "/>
+        <Label Text=""/>
+        <Label Text="Predavač/Mentor:"/>
+        <Label Text="Tomislav Bronzin"/>
+        <Label Text=""/>
+        <Label Text="Aplikaciju razvio:"/>
+        <Label Text="Filip Ivanko"/>
+      </StackLayout>
+      <StackLayout Orientation="Vertical" Grid.Row="1">
+        <Button Text="Povratak" Clicked="Povratak" Grid.Row="1"/>
+        <Image Source="blueline.png" HorizontalOptions="FillAndExpand"/>
+      </StackLayout>
+    </Grid>
+  </ContentPage.Content>
+</ContentPage>
+
+

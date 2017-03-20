@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CrossPlatformLibrary.Geolocation.Platform</name>
+    </assembly>
+    <members>
+        <member name="F:CrossPlatformLibrary.Geolocation.DateTimeExtensions.Epoch">
+            <summary>
+            Epoch is a UTC DateTime value from January 1, 1970.
+            </summary>
+        </member>
+        <member name="M:CrossPlatformLibrary.Geolocation.DateTimeExtensions.GetTimestamp(System.Int64)">
+            <summary>
+            Returns a DateTimeOffset which is Epoch + time.
+            </summary>
+            <param name="time">Time value in milliseconds (starting on January 1, 1970).</param>
+        </member>
+    </members>
+</doc>

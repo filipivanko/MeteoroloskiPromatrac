@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MeteoroloskiPromatrac.SviZapisi">
+
+  <ContentPage.Content>
+    <Grid>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="Auto"/>
+      </Grid.RowDefinitions>
+    <StackLayout Orientation="Vertical" Grid.Row="0">
+      <Image Source="blueline.png" HorizontalOptions="FillAndExpand"/>
+      <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+        <Label Text="Svi Zapisi u bazi"/>
+      </StackLayout>
+      <Image Source="blueline.png" HorizontalOptions="FillAndExpand"/>
+      <Grid>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="3*"/>
+          <ColumnDefinition Width="2*"/>
+          <ColumnDefinition Width="3*"/>
+          <ColumnDefinition Width="*"/>
+          <ColumnDefinition Width="*"/>
+          <ColumnDefinition Width="*"/>
+          <ColumnDefinition Width="3*"/>
+          <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+        <Label Text="Uvjeti" Grid.Column="0" HorizontalOptions="Center"/>
+        <Label Text="*C" Grid.Column="1" HorizontalOptions="Center"/>
+        <Label Text="hPa" Grid.Column="2" HorizontalOptions="Center"/>
+        <Label Text="%V" Grid.Column="3" HorizontalOptions="Center"/>
+        <Label Text="Vj" Grid.Column="4" HorizontalOptions="Center"/>
+        <Label Text="m/s" Grid.Column="5" HorizontalOptions="Center"/>
+        <Label Text="Datum" Grid.Column="6" HorizontalOptions="Center"/>
+        <Label Text="Lokacija" Grid.Column="7" HorizontalOptions="Center"/>
+      </Grid>
+      <Image Source="blueline.png" HorizontalOptions="FillAndExpand"/>
+    </StackLayout>
+      <ListView x:Name="Tablica" Grid.Row="1">
+        <ListView.ItemTemplate>
+          <DataTemplate>
+            <ViewCell>
+              <Grid>
+                <Grid.ColumnDefinitions>
+                  <ColumnDefinition Width="3*"/>
+                  <ColumnDefinition Width="2*"/>
+                  <ColumnDefinition Width="3*"/>
+                  <ColumnDefinition Width="*"/>
+                  <ColumnDefinition Width="*"/>
+                  <ColumnDefinition Width="*"/>
+                  <ColumnDefinition Width="3*"/>
+                  <ColumnDefinition Width="3*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                  <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Label Text="{Binding OpisVremena}" Grid.Column="0" HorizontalOptions="Center"/>
+                <Label Text="{Binding Temperatura}" Grid.Column="1" HorizontalOptions="Center"/>
+                <Label Text="{Binding Tlak}" Grid.Column="2" HorizontalOptions="Center"/>
+                <Label Text="{Binding Vlaga}" Grid.Column="3" HorizontalOptions="Center"/>
+                <Label Text="{Binding SmjerVjetra}" Grid.Column="4" HorizontalOptions="Center"/>
+                <Label Text="{Binding BrzinaVjetra}" Grid.Column="5" HorizontalOptions="Center"/>
+                <Label Text="{Binding DatumIVrijeme}" Grid.Column="6" HorizontalOptions="Center"/>
+                <Label Text="{Binding Lokacija}" Grid.Column="7" HorizontalOptions="Center"/>
+              </Grid>
+            </ViewCell>
+          </DataTemplate>
+        </ListView.ItemTemplate>
+      </ListView>
+      <Image Source="blueline.png" HorizontalOptions="FillAndExpand" Grid.Row="2" VerticalOptions="End"/>
+
+    </Grid>
+  </ContentPage.Content>
+</ContentPage>

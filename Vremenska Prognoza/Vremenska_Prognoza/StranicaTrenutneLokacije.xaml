@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MeteoroloskiPromatrac.StranicaTrenutneLokacije"
+    >
+  <ContentPage.Content>
+    <ScrollView Orientation="Vertical" >
+      <Grid>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+          <RowDefinition Height="Auto"/>
+          <RowDefinition Height="*"/>
+          <RowDefinition Height="*"/>
+          <RowDefinition  Height="Auto"/>
+          <RowDefinition  Height="Auto"/>
+          <RowDefinition  Height="Auto"/>
+        </Grid.RowDefinitions>
+        <StackLayout Orientation="Vertical"  Grid.Column="0" Grid.Row="0">
+          <Image Source="blueline.png" HorizontalOptions="FillAndExpand"/>
+          <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+            <Label Text="Trenutni uvjeti Lokacija:"/>
+            <Label Text="{Binding Lokacija}"/>
+          </StackLayout>
+          <Image Source="blueline.png" HorizontalOptions="FillAndExpand"/>
+          <StackLayout Orientation="Horizontal">
+            <Label Text="Država:"/>
+            <Label Text="{Binding Drzava}"/>
+          </StackLayout>
+          <StackLayout Orientation="Horizontal">
+            <Label Text="Vremenski Uvijeti: "/>
+            <Label Text="{Binding OpisVremena}"/>
+          </StackLayout>
+          <StackLayout Orientation="Horizontal">
+
+            <Label Text="Temperatura: "/>
+            <Label Text="{Binding Temperatura}"/>
+          </StackLayout>
+
+          <StackLayout Orientation="Horizontal">
+            <Label Text="Tlak: "/>
+            <Label Text="{Binding Tlak}"/>
+          </StackLayout>
+
+          <StackLayout Orientation="Horizontal">
+            <Label Text="Vlažnost zraka: "/>
+            <Label Text="{Binding Vlaga}"/>
+          </StackLayout>
+          <StackLayout Orientation="Horizontal">
+            <Label Text="Vjear smjer: "/>
+            <Label Text="{Binding SmjerVjetra}"/>
+          </StackLayout>
+          <StackLayout Orientation="Horizontal">
+            <Label Text="Vjear Brzina: "/>
+            <Label Text="{Binding BrzinaVjetra}"/>
+          </StackLayout>
+
+        </StackLayout>
+        <Button Text="Pokaži statistiku za lokaciju"  x:Name ="btnProsjek" Grid.Row="1"  VerticalOptions="Center" Clicked="PrikaziProsjecneVrijednosti"/>
+        <Button Text="Spremi podatke opažanja"  x:Name ="btnDodaj" Grid.Row="2"  VerticalOptions="Center" Clicked="DodajUBazu"/>
+       <Label Text="Izvor:" Grid.Row="3"/>
+         <StackLayout Padding="25,0,25,0" Grid.Row="4" VerticalOptions="End">
+     <Image Source="wundergroundLogo_4c_rev_horz.png" WidthRequest="385" HeightRequest="90" />
+          
+  </StackLayout>
+       <Image Source="blueline.png" HorizontalOptions="FillAndExpand" Grid.Row="5" VerticalOptions="End"/>
+      </Grid>
+    </ScrollView>
+  </ContentPage.Content>
+</ContentPage>

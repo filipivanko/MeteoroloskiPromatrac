@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MeteoroloskiPromatrac.PocetnaStranica">
+  <ContentPage.Content>
+      <Grid>
+        <Grid.RowDefinitions>
+          <RowDefinition Height="Auto"/>
+          <RowDefinition Height="*"/>
+          <RowDefinition Height="*"/>
+          <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="*"/>
+          <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <StackLayout Orientation="Vertical" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" >
+          <Image Source="blueline.png" HorizontalOptions="FillAndExpand"/>
+          <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+            <Label Text="Meteorološki Promatrač"/>
+          </StackLayout>
+          <Image Source="blueline.png" HorizontalOptions="FillAndExpand"/>
+        </StackLayout>
+      <Button Text="Pregled Meteoroloških stanica u Hrvatskoj" Clicked="PrikaziStaniceUHrvatskoj" Grid.Row="1" Grid.Column="0" />
+    <Button Text="Pregled Meteoroloških stanica u Europi" Clicked="PrikaziStaniceUEuropi" Grid.Row="1" Grid.Column="1"/>
+      <Button Text="Prikaz vremena za trenutnu Lokaciju" Clicked="PrikaziVrijemeZaTrenutnulokaciju" Grid.Row="2" Grid.Column="0"/>
+      <Button Text="Opcije" Clicked="PrikaziOpcije" Grid.Row="2" Grid.Column="1"/>  
+        <Image Source="blueline.png" HorizontalOptions="FillAndExpand" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" />
+      </Grid>
+  </ContentPage.Content>
+</ContentPage>

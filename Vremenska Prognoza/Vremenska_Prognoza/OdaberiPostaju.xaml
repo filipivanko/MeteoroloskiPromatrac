@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MeteoroloskiPromatrac.OdaberiPostaju">
+  <ContentPage.Content>
+    <Grid>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height ="*"/>
+        <RowDefinition Height="Auto"/>
+      </Grid.RowDefinitions>
+    <StackLayout Orientation="Vertical" Grid.Row="0">
+      <Image Source="blueline.png" HorizontalOptions="FillAndExpand"/>
+      <Label Text="Odaberite meteorološku postaju" HorizontalOptions="Center"/>
+      <Image Source="blueline.png" HorizontalOptions="FillAndExpand"/>
+    </StackLayout>
+      <ListView x:Name="lista" ItemTapped="IzaberiPostaju" Grid.Row="1"> 
+        <ListView.ItemTemplate>
+          <DataTemplate>
+            <ViewCell>
+              <Grid>
+                <Grid.ColumnDefinitions>
+                  <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                      <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                  <Label Text="{Binding Lokacija}" Grid.Column="0" TextColor="#5695F2" HorizontalOptions="StartAndExpand"/>
+                  <Label Text="{Binding Temperatura}" Grid.Column="1" />
+                 <Label Text="{Binding OpisVremena}" Grid.Column="2"/>
+              </Grid>
+       
+            </ViewCell>
+          </DataTemplate>
+        </ListView.ItemTemplate>
+      </ListView>
+      <StackLayout Orientation="Vertical" Grid.Row="2">
+      <Button Text="Osvježi podatke"  Clicked="Osvjezi"/>
+      <Button Text="Spremi sve podatke"  Clicked="DohvatiSve"/>
+      <Image Source="blueline.png" HorizontalOptions="FillAndExpand"/>
+      </StackLayout>
+
+    </Grid>
+  </ContentPage.Content>
+</ContentPage >

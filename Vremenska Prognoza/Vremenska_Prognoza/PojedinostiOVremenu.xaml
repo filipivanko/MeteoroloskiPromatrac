@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MeteoroloskiPromatrac.PojedinostiOVremenu">
+<ContentPage.Content>
+    <ScrollView Orientation="Vertical">
+    <Grid>
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition />
+      </Grid.ColumnDefinitions>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+      <RowDefinition Height="Auto"/>
+      </Grid.RowDefinitions>
+      <StackLayout Orientation="Vertical"  Grid.Row="0" >
+        <Image Source="blueline.png" HorizontalOptions="FillAndExpand"/>
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+          <Label Text="Trenutni uvjeti Lokacija:"/>
+          <Label Text="{Binding Lokacija}"/>
+        </StackLayout>
+        <Image Source="blueline.png" HorizontalOptions="FillAndExpand"/>
+        <StackLayout Orientation="Horizontal">
+          <Label Text="Vremenski Uvijeti: "/>
+          <Label Text="{Binding OpisVremena}"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+          <Label Text="Temperatura: "/>
+          <Label Text="{Binding  Temperatura}"/>
+          <Label Text=" *C"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+          <Label Text="Tlak: "/>
+          <Label Text="{Binding  Tlak}"/>
+          <Label Text=" hPa"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+          <Label Text="Vlažnost zraka: "/>
+          <Label Text="{Binding  Vlaga}"/>
+          <Label Text="%"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+          <Label Text="Vjetar smjer: "/>
+          <Label Text="{Binding  SmjerVjetra}"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+          <Label Text="Vjetar Brzina: "/>
+          <Label Text="{Binding  BrzinaVjetra}"/>
+        </StackLayout>
+      </StackLayout>
+      <Button Text="Pokaži statistiku za lokaciju" Clicked="PrikaziProsjecneVrijednosti" Grid.Row="1" VerticalOptions="Center"  />
+      <Button Text="Spremi podatke opažanja"  x:Name ="btnDodaj" Grid.Row="2"  VerticalOptions="Center" Clicked="DodajUBazu"/>
+      <Label Text="izvor: DHMZ"  Grid.Row="3"   VerticalOptions="End" HorizontalOptions="Start"/>
+      <Image Source="DHMZ.png" WidthRequest="90" HeightRequest="110"   Grid.Row="4" />
+     <Image Source="blueline.png" HorizontalOptions="FillAndExpand" Grid.Row="5" VerticalOptions="End"/>
+    </Grid>
+      </ScrollView>
+  </ContentPage.Content>
+</ContentPage>
